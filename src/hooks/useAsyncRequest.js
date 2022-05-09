@@ -9,7 +9,11 @@ const useAsyncRequest = (amount) => {
       try {
         setLoading(true);
         const response = await fetch(
-          `https://randomuser.me/api/?results=${amount}`
+          
+          //Santos
+          `https://fakeql.com//api/?results=${amount}`
+          
+          //`https://randomuser.me/api/?results=${amount}`
         );
         const json = await response.json();
         setData(json.results, setLoading(false));
